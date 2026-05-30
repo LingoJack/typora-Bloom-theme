@@ -33,34 +33,9 @@ THEMES_DIR=$(find_themes_dir) || {
 
 echo "Typora themes directory: $THEMES_DIR"
 
-# --- Download latest release that contains the zip ---
+# --- Download Bloom theme zip from repo ---
 echo "Downloading latest Bloom theme..."
-URL=""
-
-# Try latest release first, then fall back to older releases
-PAGE=1
-while [ -z "$URL" ] && [ "$PAGE" -le 5 ]; do
-  if [ "$PAGE" -eq 1 ]; then
-    # First try the "latest" endpoint (most recent non-draft, non-prerelease)
-    RELEASES_JSON=$(curl -fsSL "https://api.github.com/repos/$REPO/releases/latest" 2>/dev/null)
-    URL=$(echo "$RELEASES_JSON" | grep "browser_download_url.*$ZIP_NAME" | head -1 | cut -d'"' -f4)
-    if [ -n "$URL" ]; then break; fi
-    echo "  (latest release has no $ZIP_NAME, searching older releases...)"
-  fi
-
-  # Fall back to paginated list of all releases
-  RELEASES_JSON=$(curl -fsSL "https://api.github.com/repos/$REPO/releases?per_page=10&page=$PAGE" 2>/dev/null)
-  URL=$(echo "$RELEASES_JSON" | grep "browser_download_url.*$ZIP_NAME" | head -1 | cut -d'"' -f4)
-  if [ -n "$URL" ]; then break; fi
-
-  echo "  (page $PAGE: no $ZIP_NAME found, trying older releases...)"
-  PAGE=$((PAGE + 1))
-done
-
-if [ -z "$URL" ]; then
-  echo "Error: could not find $ZIP_NAME in latest release."
-  exit 1
-fi
+URL="https://raw.githubusercontent.com/$REPO/master/$ZIP_NAME"
 
 curl -fsSL -o "$TMP_DIR/$ZIP_NAME" "$URL"
 
