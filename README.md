@@ -9,7 +9,7 @@
 ## 安装
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/webkubor/typora-Bloom-theme/master/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/LingoJack/typora-Bloom-theme/main/install.sh | bash
 ```
 
 <details>
