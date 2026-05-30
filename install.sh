@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-REPO="webkubor/typora-Bloom-theme"
+REPO="LingoJack/typora-Bloom-theme"
 ZIP_NAME="Bloom-theme.zip"
 TMP_DIR=$(mktemp -d)
 

@@ -15,7 +15,7 @@ curl -fsSL https://raw.githubusercontent.com/webkubor/typora-Bloom-theme/master/
 <details>
 <summary>Manual</summary>
 
-1. Download [Bloom-theme.zip](https://github.com/webkubor/typora-Bloom-theme/releases/latest) and extract
+1. Download [Bloom-theme.zip](https://github.com/LingoJack/typora-Bloom-theme/releases/latest) and extract
 2. Typora → Preferences → Appearance → Open Theme Folder
 3. Copy `bloom-*.css` and `bloom/` into the folder
 4. Select a theme from the Themes menu

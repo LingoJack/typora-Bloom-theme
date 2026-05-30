@@ -15,7 +15,7 @@ curl -fsSL https://raw.githubusercontent.com/webkubor/typora-Bloom-theme/master/
 <details>
 <summary>手动安装</summary>
 
-1. 下载 [Bloom-theme.zip](https://github.com/webkubor/typora-Bloom-theme/releases/latest) 并解压
+1. 下载 [Bloom-theme.zip](https://github.com/LingoJack/typora-Bloom-theme/releases/latest) 并解压
 2. Typora → 偏好设置 → 外观 → 打开主题文件夹
 3. 将 `bloom-*.css` 和 `bloom/` 复制进去
 4. 在主题菜单中选择即可
