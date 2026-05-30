@@ -9,7 +9,7 @@ A Morandi theme collection for **Typora** — 16 palettes (8 light + 8 dark).
 ## Install
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/LingoJack/typora-Bloom-theme/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/LingoJack/typora-Bloom-theme/master/install.sh | bash
 ```
 
 <details>
