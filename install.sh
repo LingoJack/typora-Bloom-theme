@@ -11,7 +11,7 @@ trap cleanup EXIT
 # --- Locate Typora themes directory ---
 find_themes_dir() {
   local candidates=(
-    "$APPDATA/Typora/themes"            # Windows
+    "${APPDATA:-}/Typora/themes"          # Windows
     "$HOME/Library/Application Support/abnerworks.Typora/themes"  # macOS
     "$HOME/.config/Typora/themes"       # Linux
   )
